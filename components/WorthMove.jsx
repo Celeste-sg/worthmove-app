@@ -831,12 +831,18 @@ export default function WorthMove() {
             </p>
             <div className="h-64">
               <ResponsiveContainer width="100%" height="100%">
-                <RadarChart data={results.chart}>
+                <RadarChart
+                  data={results.chart}
+                  outerRadius="75%"
+                  margin={{ top: 10, right: 20, bottom: 10, left: 20 }}
+                >
                   <PolarGrid stroke="#fff" />
                   <PolarAngleAxis
                     dataKey="subject"
                     stroke="#fff"
-                    tick={{ fill: "#fff" }}
+                    tick={{ fill: "#fff",
+                            className: "text-[10px] md:text-xs", // 手机 10px，≥768px 用 xs
+                    }}
                   />
                   <Legend
                     verticalAlign="bottom"
