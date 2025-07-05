@@ -1,0 +1,826 @@
+[
+  {
+    "city": "杭州",
+    "district": "全部",
+    "education": "海外博士",
+    "validyears": 5,
+    "freq": "年",
+    "total5Year": 100000.0
+  },
+  {
+    "city": "杭州",
+    "district": "全部",
+    "education": "海外硕士",
+    "validyears": 5,
+    "freq": "年",
+    "total5Year": 30000.0
+  },
+  {
+    "city": "杭州",
+    "district": "全部",
+    "education": "海外本科",
+    "validyears": 5,
+    "freq": "年",
+    "total5Year": 10000.0
+  },
+  {
+    "city": "杭州",
+    "district": "全部",
+    "education": "国内博士",
+    "validyears": 5,
+    "freq": "年",
+    "total5Year": 100000.0
+  },
+  {
+    "city": "杭州",
+    "district": "全部",
+    "education": "国内硕士",
+    "validyears": 5,
+    "freq": "年",
+    "total5Year": 30000.0
+  },
+  {
+    "city": "杭州",
+    "district": "全部",
+    "education": "国内本科",
+    "validyears": 5,
+    "freq": "年",
+    "total5Year": 10000.0
+  },
+  {
+    "city": "杭州",
+    "district": "全部",
+    "education": "海外博士",
+    "validyears": 2,
+    "freq": "月",
+    "total5Year": 36000.0
+  },
+  {
+    "city": "杭州",
+    "district": "全部",
+    "education": "海外硕士",
+    "validyears": 2,
+    "freq": "月",
+    "total5Year": 36000.0
+  },
+  {
+    "city": "杭州",
+    "district": "全部",
+    "education": "海外本科",
+    "validyears": 2,
+    "freq": "月",
+    "total5Year": 36000.0
+  },
+  {
+    "city": "杭州",
+    "district": "全部",
+    "education": "国内博士",
+    "validyears": 2,
+    "freq": "月",
+    "total5Year": 36000.0
+  },
+  {
+    "city": "杭州",
+    "district": "全部",
+    "education": "国内硕士",
+    "validyears": 2,
+    "freq": "月",
+    "total5Year": 36000.0
+  },
+  {
+    "city": "杭州",
+    "district": "全部",
+    "education": "国内本科",
+    "validyears": 2,
+    "freq": "月",
+    "total5Year": 36000.0
+  },
+  {
+    "city": "杭州",
+    "district": "全部",
+    "education": "海外博士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 150000.0
+  },
+  {
+    "city": "杭州",
+    "district": "全部",
+    "education": "国内博士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 150000.0
+  },
+  {
+    "city": "杭州",
+    "district": "萧山",
+    "education": "海外博士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 50000.0
+  },
+  {
+    "city": "杭州",
+    "district": "萧山",
+    "education": "国内博士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 50000.0
+  },
+  {
+    "city": "杭州",
+    "district": "余杭",
+    "education": "海外博士",
+    "validyears": 1,
+    "freq": "年",
+    "total5Year": 60000.0
+  },
+  {
+    "city": "杭州",
+    "district": "余杭",
+    "education": "海外硕士",
+    "validyears": 1,
+    "freq": "年",
+    "total5Year": 60000.0
+  },
+  {
+    "city": "杭州",
+    "district": "余杭",
+    "education": "海外本科",
+    "validyears": 1,
+    "freq": "年",
+    "total5Year": 40000.0
+  },
+  {
+    "city": "杭州",
+    "district": "余杭",
+    "education": "国内博士",
+    "validyears": 3,
+    "freq": "年",
+    "total5Year": 50000.0
+  },
+  {
+    "city": "杭州",
+    "district": "余杭",
+    "education": "海外博士",
+    "validyears": 3,
+    "freq": "年",
+    "total5Year": 50000.0
+  },
+  {
+    "city": "杭州",
+    "district": "钱塘",
+    "education": "国内博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 50000.0
+  },
+  {
+    "city": "杭州",
+    "district": "钱塘",
+    "education": "海外博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 50000.0
+  },
+  {
+    "city": "杭州",
+    "district": "临安",
+    "education": "海外博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 100000.0
+  },
+  {
+    "city": "杭州",
+    "district": "临安",
+    "education": "海外硕士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 30000.0
+  },
+  {
+    "city": "杭州",
+    "district": "临安",
+    "education": "海外本科",
+    "validyears": 7,
+    "freq": "年",
+    "total5Year": 10000.0
+  },
+  {
+    "city": "杭州",
+    "district": "临安",
+    "education": "国内博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 100000.0
+  },
+  {
+    "city": "杭州",
+    "district": "临安",
+    "education": "国内硕士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 30000.0
+  },
+  {
+    "city": "杭州",
+    "district": "临安",
+    "education": "国内本科",
+    "validyears": 7,
+    "freq": "年",
+    "total5Year": 10000.0
+  },
+  {
+    "city": "杭州",
+    "district": "富阳",
+    "education": "海外博士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 54000.0
+  },
+  {
+    "city": "杭州",
+    "district": "富阳",
+    "education": "海外硕士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 36000.0
+  },
+  {
+    "city": "杭州",
+    "district": "富阳",
+    "education": "海外本科",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 18000.0
+  },
+  {
+    "city": "杭州",
+    "district": "富阳",
+    "education": "国内博士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 54000.0
+  },
+  {
+    "city": "杭州",
+    "district": "富阳",
+    "education": "国内硕士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 36000.0
+  },
+  {
+    "city": "杭州",
+    "district": "富阳",
+    "education": "国内本科",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 18000.0
+  },
+  {
+    "city": "苏州",
+    "district": "全部",
+    "education": "海外博士",
+    "validyears": 5,
+    "freq": "月",
+    "total5Year": 11200.0
+  },
+  {
+    "city": "苏州",
+    "district": "全部",
+    "education": "海外硕士",
+    "validyears": 5,
+    "freq": "月",
+    "total5Year": 8400.0
+  },
+  {
+    "city": "苏州",
+    "district": "全部",
+    "education": "海外本科",
+    "validyears": 5,
+    "freq": "月",
+    "total5Year": 5600.0
+  },
+  {
+    "city": "苏州",
+    "district": "全部",
+    "education": "国内博士",
+    "validyears": 2,
+    "freq": "月",
+    "total5Year": 11200.0
+  },
+  {
+    "city": "苏州",
+    "district": "全部",
+    "education": "国内硕士",
+    "validyears": 2,
+    "freq": "月",
+    "total5Year": 8400.0
+  },
+  {
+    "city": "苏州",
+    "district": "全部",
+    "education": "国内本科",
+    "validyears": 2,
+    "freq": "月",
+    "total5Year": 5600.0
+  },
+  {
+    "city": "苏州",
+    "district": "工业园",
+    "education": "海外博士",
+    "validyears": 2,
+    "freq": "年",
+    "total5Year": 80000.0
+  },
+  {
+    "city": "苏州",
+    "district": "工业园",
+    "education": "海外硕士",
+    "validyears": 2,
+    "freq": "年",
+    "total5Year": 60000.0
+  },
+  {
+    "city": "苏州",
+    "district": "工业园",
+    "education": "海外本科",
+    "validyears": 2,
+    "freq": "年",
+    "total5Year": 40000.0
+  },
+  {
+    "city": "深圳",
+    "district": "全部",
+    "education": "海外博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 100000.0
+  },
+  {
+    "city": "深圳",
+    "district": "全部",
+    "education": "海外硕士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 50000.0
+  },
+  {
+    "city": "深圳",
+    "district": "全部",
+    "education": "海外本科",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 30000.0
+  },
+  {
+    "city": "深圳",
+    "district": "全部",
+    "education": "国内博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 100000.0
+  },
+  {
+    "city": "深圳",
+    "district": "全部",
+    "education": "国内硕士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 50000.0
+  },
+  {
+    "city": "深圳",
+    "district": "全部",
+    "education": "国内本科",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 30000.0
+  },
+  {
+    "city": "上海",
+    "district": "普陀",
+    "education": "海外博士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 48000.0
+  },
+  {
+    "city": "上海",
+    "district": "长宁",
+    "education": "海外博士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 38400.0
+  },
+  {
+    "city": "上海",
+    "district": "长宁",
+    "education": "海外硕士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 38400.0
+  },
+  {
+    "city": "上海",
+    "district": "长宁",
+    "education": "海外本科",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 38400.0
+  },
+  {
+    "city": "上海",
+    "district": "长宁",
+    "education": "国内博士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 38400.0
+  },
+  {
+    "city": "上海",
+    "district": "长宁",
+    "education": "国内硕士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 38400.0
+  },
+  {
+    "city": "上海",
+    "district": "长宁",
+    "education": "国内本科",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 38400.0
+  },
+  {
+    "city": "上海",
+    "district": "闵行",
+    "education": "海外博士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 36000.0
+  },
+  {
+    "city": "上海",
+    "district": "闵行",
+    "education": "海外硕士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 36000.0
+  },
+  {
+    "city": "上海",
+    "district": "闵行",
+    "education": "海外本科",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 36000.0
+  },
+  {
+    "city": "上海",
+    "district": "闵行",
+    "education": "国内博士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 36000.0
+  },
+  {
+    "city": "上海",
+    "district": "闵行",
+    "education": "国内硕士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 36000.0
+  },
+  {
+    "city": "上海",
+    "district": "闵行",
+    "education": "国内本科",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 36000.0
+  },
+  {
+    "city": "上海",
+    "district": "杨浦",
+    "education": "海外博士",
+    "validyears": 2,
+    "freq": "月",
+    "total5Year": 12000.0
+  },
+  {
+    "city": "上海",
+    "district": "杨浦",
+    "education": "海外硕士",
+    "validyears": 2,
+    "freq": "月",
+    "total5Year": 9600.0
+  },
+  {
+    "city": "上海",
+    "district": "杨浦",
+    "education": "海外本科",
+    "validyears": 2,
+    "freq": "月",
+    "total5Year": 7200.0
+  },
+  {
+    "city": "上海",
+    "district": "杨浦",
+    "education": "国内博士",
+    "validyears": 2,
+    "freq": "月",
+    "total5Year": 12000.0
+  },
+  {
+    "city": "上海",
+    "district": "杨浦",
+    "education": "国内硕士",
+    "validyears": 2,
+    "freq": "月",
+    "total5Year": 9600.0
+  },
+  {
+    "city": "上海",
+    "district": "杨浦",
+    "education": "国内本科",
+    "validyears": 2,
+    "freq": "月",
+    "total5Year": 7200.0
+  },
+  {
+    "city": "上海",
+    "district": "浦东",
+    "education": "海外博士",
+    "validyears": 2,
+    "freq": "年",
+    "total5Year": 100000.0
+  },
+  {
+    "city": "上海",
+    "district": "浦东",
+    "education": "海外硕士",
+    "validyears": 3,
+    "freq": "月",
+    "total5Year": 72000.0
+  },
+  {
+    "city": "上海",
+    "district": "浦东",
+    "education": "海外本科",
+    "validyears": 3,
+    "freq": "月",
+    "total5Year": 72000.0
+  },
+  {
+    "city": "上海",
+    "district": "浦东",
+    "education": "国内博士",
+    "validyears": 2,
+    "freq": "年",
+    "total5Year": 100000.0
+  },
+  {
+    "city": "上海",
+    "district": "浦东",
+    "education": "国内硕士",
+    "validyears": 3,
+    "freq": "月",
+    "total5Year": 72000.0
+  },
+  {
+    "city": "上海",
+    "district": "浦东",
+    "education": "国内本科",
+    "validyears": 3,
+    "freq": "月",
+    "total5Year": 72000.0
+  },
+  {
+    "city": "上海",
+    "district": "徐汇",
+    "education": "海外博士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 72000.0
+  },
+  {
+    "city": "上海",
+    "district": "徐汇",
+    "education": "海外硕士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 36000.0
+  },
+  {
+    "city": "上海",
+    "district": "徐汇",
+    "education": "国内博士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 72000.0
+  },
+  {
+    "city": "上海",
+    "district": "徐汇",
+    "education": "国内硕士",
+    "validyears": 100,
+    "freq": "月",
+    "total5Year": 36000.0
+  },
+  {
+    "city": "北京",
+    "district": "经开",
+    "education": "海外博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 72000.0
+  },
+  {
+    "city": "北京",
+    "district": "经开",
+    "education": "海外硕士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 72000.0
+  },
+  {
+    "city": "北京",
+    "district": "经开",
+    "education": "国内博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 72000.0
+  },
+  {
+    "city": "北京",
+    "district": "大兴",
+    "education": "海外博士",
+    "validyears": 1,
+    "freq": "年",
+    "total5Year": 30000.0
+  },
+  {
+    "city": "北京",
+    "district": "大兴",
+    "education": "海外硕士",
+    "validyears": 1,
+    "freq": "年",
+    "total5Year": 30000.0
+  },
+  {
+    "city": "北京",
+    "district": "大兴",
+    "education": "海外本科",
+    "validyears": 1,
+    "freq": "年",
+    "total5Year": 30000.0
+  },
+  {
+    "city": "北京",
+    "district": "大兴",
+    "education": "国内博士",
+    "validyears": 1,
+    "freq": "年",
+    "total5Year": 30000.0
+  },
+  {
+    "city": "北京",
+    "district": "大兴",
+    "education": "国内硕士",
+    "validyears": 1,
+    "freq": "年",
+    "total5Year": 30000.0
+  },
+  {
+    "city": "北京",
+    "district": "大兴",
+    "education": "国内本科",
+    "validyears": 1,
+    "freq": "年",
+    "total5Year": 30000.0
+  },
+  {
+    "city": "广州",
+    "district": "全部",
+    "education": "海外博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 200000.0
+  },
+  {
+    "city": "广州",
+    "district": "全部",
+    "education": "国内博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 100000.0
+  },
+  {
+    "city": "广州",
+    "district": "南沙",
+    "education": "海外博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 120000.0
+  },
+  {
+    "city": "广州",
+    "district": "南沙",
+    "education": "海外硕士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 60000.0
+  },
+  {
+    "city": "广州",
+    "district": "南沙",
+    "education": "海外本科",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 30000.0
+  },
+  {
+    "city": "广州",
+    "district": "南沙",
+    "education": "国内博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 120000.0
+  },
+  {
+    "city": "广州",
+    "district": "南沙",
+    "education": "国内硕士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 60000.0
+  },
+  {
+    "city": "广州",
+    "district": "南沙",
+    "education": "国内本科",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 30000.0
+  },
+  {
+    "city": "广州",
+    "district": "天河",
+    "education": "海外博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 300000.0
+  },
+  {
+    "city": "广州",
+    "district": "天河",
+    "education": "国内博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 300000.0
+  },
+  {
+    "city": "广州",
+    "district": "番禺",
+    "education": "海外博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 200000.0
+  },
+  {
+    "city": "广州",
+    "district": "番禺",
+    "education": "国内博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 200000.0
+  },
+  {
+    "city": "广州",
+    "district": "番禺",
+    "education": "海外博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 100000.0
+  },
+  {
+    "city": "广州",
+    "district": "增城",
+    "education": "海外博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 200000.0
+  },
+  {
+    "city": "广州",
+    "district": "增城",
+    "education": "国内博士",
+    "validyears": 100,
+    "freq": "年",
+    "total5Year": 200000.0
+  }
+]
