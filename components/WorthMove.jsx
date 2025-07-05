@@ -32,6 +32,29 @@ import {
   Legend,
 } from "recharts";
 
+// 自定义刻度，支持换行并加大行间距
+const MultiLineTick = ({ x, y, textAnchor, payload, fill }) => {
+  const lines = String(payload.value).split("\n");
+  const lineHeight = 16;              // 调整此值即可改变行间距
+  // 使多行文本整体垂直居中
+  const startY = y - ((lines.length - 1) * lineHeight) / 2;
+
+  return (
+    <text x={x} y={startY} textAnchor={textAnchor} fill={fill}>
+      {lines.map((line, idx) => (
+        <tspan
+          key={idx}
+          x={x}
+          dy={idx === 0 ? 0 : lineHeight}
+          fontSize={14}               // 如需更小字体可调整
+        >
+          {line}
+        </tspan>
+      ))}
+    </text>
+  );
+};
+
 // 汇率映射
 const currencyRates = {
   人民币: 1,
@@ -529,10 +552,10 @@ export default function WorthMove() {
     const scoreD = dim1D + dim2D + dim3D + dim4D + dim5D;
     const labels = [
       "薪资购买力",
-      "与海外生活方式契合度",
+      "与海外生活\n方式契合度",
       "短期优势",
       "长期优势",
-      "家人伴侣陪伴机会",
+      "家人伴侣\n陪伴机会",
     ];
     const chartData = labels.map((t, i) => ({
       subject: t,
@@ -833,16 +856,14 @@ export default function WorthMove() {
               <ResponsiveContainer width="100%" height="100%">
                 <RadarChart
                   data={results.chart}
-                  outerRadius="75%"
+                  outerRadius="80%"
                   margin={{ top: 10, right: 20, bottom: 10, left: 20 }}
                 >
                   <PolarGrid stroke="#fff" />
                   <PolarAngleAxis
                     dataKey="subject"
                     stroke="#fff"
-                    tick={{ fill: "#fff",
-                            className: "text-[10px] md:text-xs", // 手机 10px，≥768px 用 xs
-                    }}
+                    tick={<MultiLineTick fill="#fff" />}
                   />
                   <Legend
                     verticalAlign="bottom"
