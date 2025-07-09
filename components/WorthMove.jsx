@@ -1,25 +1,55 @@
 "use client";
 import subsidyData from "../data/subsidy.json";
 
+/**
+ * 计算指定城市 / 区域 / 学历在 5 年内能拿到的总补贴
+ * 逻辑：
+ * 1. 只有当年龄 < 40 岁时，调用者才会执行本函数（外层已判断）。
+ * 2. 同一城市可能有两条记录：发放频率 = “月” 和 “年”。
+ *    需要把这两条的「5年总金额」相加。
+ * 3. 区域选择：
+ *    • 若用户选 “全部”，只匹配 r.district === "全部"
+ *    • 若用户选具体区，则同时匹配 r.district === 该区 以及 r.district === "全部"
+ */
 function calcSubsidyTotal(city, district, education, gradDate) {
   const gradYear = gradDate && gradDate.length >= 4 ? parseInt(gradDate.slice(0, 4), 10) : NaN;
   const nowYear  = new Date().getFullYear();
   const diffYear = nowYear - gradYear;
+  const normDist = (district === "全部区" || !district) ? "全部" : district;
 
-  return subsidyData
-    .filter((r) => {
-      if (r.city !== city) return false;
-      // 区域过滤：如果用户选“全部”，只匹配 r.district === "全部"；如果选具体区，则匹配对应区
-      if (district === "全部") {
-        if (r.district !== "全部") return false;
-      } else if (district) {
-        if (r.district !== district) return false;
-      }
-      if (r.education !== education) return false;
-      if (diffYear > r.validyears) return false;
-      return true;
-    })
-    .reduce((sum, r) => sum + r.total5Year, 0);
+  const match = (r) => {
+    if (r.city !== city) return false;
+    // 区域过滤
+    if (normDist === "全部") {
+      if (r.district !== "全部") return false;
+    } else {
+      if (!(r.district === normDist || r.district === "全部")) return false;
+    }
+    if (r.education !== education) return false;
+    if (diffYear > r.validyears)  return false;
+    return true;
+  };
+
+  // 找到月补贴 & 年补贴，两者可能都存在，也可能只存在其一
+  let yearTotal  = 0; // 年度补贴仍按加总
+  let monthTotal = 0; // 月度补贴取“最高”那条
+
+  subsidyData.forEach((r) => {
+    if (!match(r)) return;
+
+    const val = Number(r.total5Year || 0);
+
+    if (r.freq === "年") {
+      yearTotal += val;               // 多条年的仍累加
+    } else if (r.freq === "月") {
+      monthTotal = Math.max(monthTotal, val); // 取最高月度补贴
+    }
+  });
+  return {
+    total: yearTotal + monthTotal,
+    monthTotal,
+    yearTotal,
+  };
 }
 
 import React, { useState, useMemo } from "react";
@@ -55,14 +85,6 @@ const MultiLineTick = ({ x, y, textAnchor, payload, fill }) => {
   );
 };
 
-// 汇率映射
-const currencyRates = {
-  人民币: 1,
-  新加坡元: 5.6,
-  美元: 7.2,
-  欧元: 8.45,
-  澳元: 4.71,
-};
 
 // 购买力平价 (PPP) 映射（以中国人民币为基准，1美元=4.19人民币 PPP）
 const pppRates = {
@@ -375,7 +397,7 @@ const qScore = { A: 4, B: 3, C: 2, D: 1 };
 
 export default function WorthMove() {
   // 下拉选项
-  const currencyOptions = Object.keys(currencyRates);
+  const currencyOptions = Object.keys(pppRates);
   const periodOptions = ["月薪", "周薪", "年薪"];
 
   const [form, setForm] = useState({
@@ -472,10 +494,10 @@ export default function WorthMove() {
     setLoading(true);
 
     // —— 维度1：薪资购买力 ——
-    const annualGrossLocal = toAnnual(form.salary, form.period) * currencyRates[form.currency];
+    const annualGrossLocal = toAnnual(form.salary, form.period) * pppRates[form.currency];
     const overseasTax = calcOverseasTax(annualGrossLocal, form.currency);
     const ovGross = annualGrossLocal - overseasTax;
-    const monthlyGrossLocal = toMonthly(form.dSalary, form.dPeriod) * currencyRates[form.dCurrency];
+    const monthlyGrossLocal = toMonthly(form.dSalary, form.dPeriod) * pppRates[form.dCurrency];
     const sihf = form.social ? calcSIHF(form.city, monthlyGrossLocal) : 0;
     const taxableMonthly = monthlyGrossLocal - sihf;
     const annualTaxChina = calcChinaTax(taxableMonthly * 12);
@@ -484,8 +506,19 @@ export default function WorthMove() {
     const standardHours = hoursMap["双休+朝九晚五"];
     const selectedHours = hoursMap[form.dHoliday] || standardHours;
     const dGrossAdjusted = dGross * (standardHours / selectedHours);
+    // —— 年度人才补贴（如果适用），平均到每年 ——
+    let subsidyAnnual = 0;
+    if (form.under40) {
+      const { total, monthTotal, yearTotal } = calcSubsidyTotal(
+        form.city,
+        form.district,
+        form.education,
+        form.gradDateO
+      );
+      subsidyAnnual = total / 5; // 平均到每年
+    }
     const ovVal = ovGross;
-    const dVal = dGrossAdjusted;
+    const dVal = dGrossAdjusted + subsidyAnnual; // 加上年度补贴再比较购买力
     const maxVal = Math.max(ovVal, dVal);
     const dim1O = ovVal === maxVal ? 20 : (ovVal / maxVal) * 20;
     const dim1D = dVal === maxVal ? 20 : (dVal / maxVal) * 20;
@@ -504,7 +537,7 @@ export default function WorthMove() {
 
     // 补贴（仅限40周岁以下）
     if (form.under40) {
-      const subsidyTotal = calcSubsidyTotal(
+      const { total: subsidyTotal } = calcSubsidyTotal(
         form.city,
         form.district,
         form.education,
